@@ -220,7 +220,7 @@
 					</div>
 					<div class="col-lg invis" data-animation="slide-in-right">
 						<h3><i class="fab fa-youtube"></i> YouTube Windowed FullScreen</h3>
-						<p>A chrome extension I developed back in 2016. Initially, I made it for personal use to make the most of my dual monitor setup but now has above <b>12,000 weekly users</b> and an average rating of <b>4.6/5.</b></p>
+						<p>A chrome extension I developed back in 2016. Initially, I made it for personal use to make the most of my dual monitor setup but now has above <b><span id="installCount">12,000</span> weekly users</b> and an average rating of <b><span id="ratingValue">4.6</span>/5</b> with <b><span id="ratingCount">158</span></b> votes (These figures are fetched dynamically).</p>
 						<p>This extension adds an icon to the default YouTube player that toggles a full-screen mode which fills only your browser window. This can be useful for multi-screen setups where users may still want to pay attention to other chrome tabs.</p>
 						<a href="https://chrome.google.com/webstore/detail/youtube-windowed-fullscre/gkkmiofalnjagdcjheckamobghglpdpm">Available Here</a>
 					</div>
@@ -344,6 +344,7 @@
 						<h3><i class="fas fa-link"></i> This Website!</h3>
 						<p>This page was crafted by me during some time off from work. Even the background image is from a drone shot of mine!</p>
 						<p>I used a mix of libraries and custom code using jQuery, Bootstrap and SCSS to create a simplistic web page to showcase myself.</p>
+						<p>I've also implemented a small node.js server which scrapes and fetches the latest number of installs, rating, and number of votes given a chrome extension ID for the section above. The endpoint for this lives at: https://navijador.com/webstore-stats?id=gkkmiofalnjagdcjheckamobghglpdpm </p>
 					</div>
 				</div>
 				<div class="divider invis" data-animation="fade-in"></div>

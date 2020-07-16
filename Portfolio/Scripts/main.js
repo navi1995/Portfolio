@@ -28,7 +28,10 @@
 		setupVisibleElementAnimations();
 	});
 	setupNavigationClicks();
-	$(window).on("load", setupHeaderSize);
+	$(window).on("load", function () {
+		setupHeaderSize();
+		getChromeStoreDetails();
+	});
 
 	function setupNavigationClicks() {
 		$("#headerNavBar a").off("click.navigate").on("click.navigate", function () {
@@ -111,5 +114,22 @@
 				isAnimatedScroll = false;
 			});
 		}
+	}
+
+	function getChromeStoreDetails() {
+		$.ajax({
+			url: '/webstore-stats?id=gkkmiofalnjagdcjheckamobghglpdpm',
+			method: 'GET',
+			contentType: 'application/json; charset=utf-8',
+			dataType: 'json'
+		}).done(function (data, textStatus, jqXHR) {
+			if (data.installCount) $("#installCount").html(numberWithCommas(data.installCount));
+			if (data.ratingValue) $("#ratingValue").html(Math.round((data.ratingValue + Number.EPSILON) * 100) / 100);
+			if (data.ratingCount) $("#ratingCount").html(data.ratingCount); 
+		});
+	}
+
+	function numberWithCommas(x) {
+		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	}
 });

@@ -137,6 +137,8 @@ body {
   body #projectRows .col-lg.images-caro {
     margin-top: auto;
     margin-bottom: auto; }
+  body #projectRows .carousel-inner {
+    height: 320px; }
   body #projectRows .col-lg, body #aboutMeRows .col-lg {
     /*margin-top: auto;
 		margin-bottom: auto;*/
