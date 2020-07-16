@@ -141,6 +141,11 @@ body {
     /*margin-top: auto;
 		margin-bottom: auto;*/
     text-align: center; }
+    body #projectRows .col-lg .carousel-item, body #aboutMeRows .col-lg .carousel-item {
+      width: 540px;
+      height: 280px; }
+    body #projectRows .col-lg .carousel-item img, body #aboutMeRows .col-lg .carousel-item img {
+      max-height: 280px; }
     body #projectRows .col-lg img, body #aboutMeRows .col-lg img {
       margin-left: auto;
       margin-right: auto;

@@ -215,6 +215,15 @@ body {
 		margin-bottom: auto;*/
 		text-align: center;
 
+		.carousel-item {
+			width: 540px;
+			height: 280px;
+		}
+
+		.carousel-item img {
+			max-height: 280px;
+		}
+
 		img {
 			margin-left: auto;
 			margin-right: auto;

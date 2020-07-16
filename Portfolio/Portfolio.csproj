@@ -85,11 +85,14 @@
     </Content>
     <Content Include="favicon.ico" />
     <Content Include="Images\20170711_105815 %282%29.jpg" />
+    <Content Include="Images\addMovie.png" />
     <Content Include="Images\DJI_0056.JPG" />
     <Content Include="Images\FileV2 %281%29.png" />
     <Content Include="Images\image.png" />
+    <Content Include="Images\list.PNG" />
     <Content Include="Images\logo.png" />
     <Content Include="Images\Navi_L4A9351.jpg" />
+    <Content Include="Images\poll.png" />
     <Content Include="Images\screen1.png" />
     <Content Include="Images\screen2.png" />
     <Content Include="Images\screen3.png" />
@@ -98,6 +101,7 @@
     <Content Include="Images\splash.png" />
     <Content Include="Images\test.png" />
     <Content Include="Images\webscreen.PNG" />
+    <Content Include="Images\winner.png" />
     <Content Include="Images\worksc.PNG" />
     <Content Include="Images\worksca3.png" />
     <Content Include="index.html" />
