@@ -86,8 +86,8 @@
 		return (
 			rect.top >= 0 &&
 			rect.left >= 0 &&
-			rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
-			rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
+			rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && 
+			rect.right <= (window.innerWidth || document.documentElement.clientWidth)
 		);
 	}
 
@@ -96,10 +96,6 @@
 		var navbarHeight = $(".navbar-container").height();
 		var headerTextHeight = $(".headers").height();
 		var paddingY = (browserHeight - navbarHeight) / 2 - headerTextHeight / 2;
-
-		//if (paddingY < 254) {
-		//	paddingY = 254;
-		//}
 
 		$(".headers").css("padding", paddingY + "px 0px");
 	}
@@ -118,10 +114,10 @@
 
 	function getChromeStoreDetails() {
 		$.ajax({
-			url: '/webstore-stats?id=gkkmiofalnjagdcjheckamobghglpdpm',
-			method: 'GET',
-			contentType: 'application/json; charset=utf-8',
-			dataType: 'json'
+			url: "/webstore-stats?id=gkkmiofalnjagdcjheckamobghglpdpm",
+			method: "GET",
+			contentType: "application/json; charset=utf-8",
+			dataType: "json"
 		}).done(function (data, textStatus, jqXHR) {
 			if (data.installCount) $("#installCount").html(numberWithCommas(data.installCount));
 			if (data.ratingValue) $("#ratingValue").html(Math.round((data.ratingValue + Number.EPSILON) * 100) / 100);
