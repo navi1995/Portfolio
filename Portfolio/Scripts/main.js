@@ -28,9 +28,9 @@
 		setupVisibleElementAnimations();
 	});
 	setupNavigationClicks();
+	getChromeStoreDetails();
 	$(window).on("load", function () {
 		setupHeaderSize();
-		getChromeStoreDetails();
 	});
 
 	function setupNavigationClicks() {
@@ -57,11 +57,9 @@
 		$els.each(function () {
 			var $el = $(this);
 
-			if (isElementInView($el)) {
-				console.log("in view");
-			}
-
-			if (isElementInView($el) && !$el.hasClass("animated")) {
+			if ($el.hasClass("animated")) {
+				return;
+			} else if (!$el.hasClass("animated") && isElementInView($el)) {
 				var animationClass = $el.attr("data-animation");
 
 				$el.css({

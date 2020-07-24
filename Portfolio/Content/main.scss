@@ -228,7 +228,7 @@ body {
 			max-height: 280px;
 		}
 
-		img {
+		img:not(.shield) {
 			margin-left: auto;
 			margin-right: auto;
 			display: block;
@@ -240,7 +240,7 @@ ul {
 	text-align: left !important;
 }
 
-a {
+a:not(.shield-link, .inline-link) {
 	text-align: center !important;
 	display: block;
 }

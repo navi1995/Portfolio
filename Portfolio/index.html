@@ -54,8 +54,8 @@
 					<h1>Navi Jador</h1>
 					<p style="margin-bottom: 0;">
 						<span style="font-size: 28px;">Full-stack software Developer born and raised in Auckland, New Zealand <i class="fas fa-kiwi-bird"></i></span>
-						</br>
-						</br>
+						<br />
+						<br />
 						<button class="main-button" id="begin">
 							<span>Lets Begin</span><span class="icon is-large"><i id="viewArrow" class="fas fa-arrow-right" style="margin-left: 10px;"></i></span>
 						</button>
@@ -220,9 +220,17 @@
 					</div>
 					<div class="col-lg invis" data-animation="slide-in-right">
 						<h3><i class="fab fa-youtube"></i> YouTube Windowed FullScreen</h3>
-						<p>A chrome extension I developed back in 2016. Initially, I made it for personal use to make the most of my dual monitor setup but now has above <b><span id="installCount">12,000</span> weekly users</b> and an average rating of <b><span id="ratingValue">4.6</span>/5</b> with <b><span id="ratingCount">158</span></b> votes (These figures are fetched dynamically).</p>
+						<p>A chrome extension I developed back in 2016. Initially, I made it for personal use to make the most of my dual monitor setup but now has above <b><span id="installCount">12,000</span> weekly users</b> and an average rating of <b><span id="ratingValue">4.6</span>/5</b> with <b><span id="ratingCount">158</span></b> votes (These figures are fetched dynamically using <a class="inline-link" href="https://www.npmjs.com/package/chrome-webstore-stats">this npmjs module I created</a>).</p>
 						<p>This extension adds an icon to the default YouTube player that toggles a full-screen mode which fills only your browser window. This can be useful for multi-screen setups where users may still want to pay attention to other chrome tabs.</p>
 						<a href="https://chrome.google.com/webstore/detail/youtube-windowed-fullscre/gkkmiofalnjagdcjheckamobghglpdpm">Available Here</a>
+						<p>
+							<a class="shield-link" href="https://chrome.google.com/webstore/detail/youtube-windowed-fullscre/gkkmiofalnjagdcjheckamobghglpdpm"><img class="shield" alt="Chrome Web Store" src="https://img.shields.io/chrome-web-store/users/gkkmiofalnjagdcjheckamobghglpdpm?label=Chrome%20Users"></a>
+							<a class="shield-link" href="https://chrome.google.com/webstore/detail/youtube-windowed-fullscre/gkkmiofalnjagdcjheckamobghglpdpm"><img class="shield" href="https://chrome.google.com/webstore/detail/youtube-windowed-fullscre/gkkmiofalnjagdcjheckamobghglpdpm" alt="Chrome Web Store" src="https://img.shields.io/chrome-web-store/rating/gkkmiofalnjagdcjheckamobghglpdpm?label=Chrome%20Rating"></a>
+							<br />
+							<a class="shield-link" href="https://addons.mozilla.org/en-US/firefox/addon/youtube-window-fullscreen/"><img class="shield" alt="Mozilla Add-on" src="https://img.shields.io/amo/dw/youtube-window-fullscreen?label=Firefox%20Downloads"></a>
+							<a class="shield-link" href="https://addons.mozilla.org/en-US/firefox/addon/youtube-window-fullscreen/"><img class="shield" href="https://addons.mozilla.org/en-US/firefox/addon/youtube-window-fullscreen/" alt="Mozilla Add-on" src="https://img.shields.io/amo/users/youtube-window-fullscreen?label=Firefox%20Users"></a>
+							<a class="shield-link" href="https://addons.mozilla.org/en-US/firefox/addon/youtube-window-fullscreen/"><img class="shield" href="https://addons.mozilla.org/en-US/firefox/addon/youtube-window-fullscreen/" alt="Mozilla Add-on" src="https://img.shields.io/amo/rating/youtube-window-fullscreen?label=Firefox%20Rating"></a>
+						</p>
 					</div>
 				</div>
 				<div class="divider invis" data-animation="fade-in"></div>
@@ -344,7 +352,8 @@
 						<h3><i class="fas fa-link"></i> This Website!</h3>
 						<p>This page was crafted by me during some time off from work. Even the background image is from a drone shot of mine!</p>
 						<p>I used a mix of libraries and custom code using jQuery, Bootstrap and SCSS to create a simplistic web page to showcase myself.</p>
-						<p>I've also implemented a small node.js server which scrapes and fetches the latest number of installs, rating, and number of votes given a chrome extension ID for the section above. The endpoint for this lives at: https://navijador.com/webstore-stats?id=gkkmiofalnjagdcjheckamobghglpdpm </p>
+						<p>I've also implemented a small node.js server which scrapes and fetches the latest number of installs, rating, and number of votes given a chrome extension ID for the section above. I then created a npmjs module for the functionality, and implemented it in my own API: <a href="https://www.npmjs.com/package/chrome-webstore-stats">https://www.npmjs.com/package/chrome-webstore-stats</a></p>
+						<p><a class="shield-link" href="https://www.npmjs.com/package/chrome-webstore-stats"><img class="shield" alt="npm" src="https://img.shields.io/npm/dt/chrome-webstore-stats"></a></p>
 					</div>
 				</div>
 				<div class="divider invis" data-animation="fade-in"></div>

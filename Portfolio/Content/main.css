@@ -148,7 +148,7 @@ body {
       height: 280px; }
     body #projectRows .col-lg .carousel-item img, body #aboutMeRows .col-lg .carousel-item img {
       max-height: 280px; }
-    body #projectRows .col-lg img, body #aboutMeRows .col-lg img {
+    body #projectRows .col-lg img:not(.shield), body #aboutMeRows .col-lg img:not(.shield) {
       margin-left: auto;
       margin-right: auto;
       display: block; }
@@ -156,7 +156,7 @@ body {
 ul {
   text-align: left !important; }
 
-a {
+a:not(.shield-link, .inline-link) {
   text-align: center !important;
   display: block; }
 
