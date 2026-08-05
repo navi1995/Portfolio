@@ -265,7 +265,7 @@
                 <span class="text-lg">🎬</span>
               </div>
             <h3 class="text-xl font-semibold text-gray-900 mb-2">Movie Night Bot</h3>
-            <p class="text-gray-700 text-sm mb-4">Node.js Discord bot for organizing movie nights with friends. Built from scratch, now serves 2.4M members across 40.9k servers. Premium subscriptions powered by Square payments.</p>
+            <p class="text-gray-700 text-sm mb-4">Node.js Discord bot for organizing movie nights with friends. Built from scratch, now serves 2.4M members across <span id="server-count">40.9k</span> servers. Premium subscriptions powered by Square payments.</p>
             <div class="flex flex-wrap gap-1.5 mb-4">
               <span class="text-xs px-2.5 py-1 bg-gray-100 text-gray-700 rounded-full">Discord Bot</span>
               <span class="text-xs px-2.5 py-1 bg-gray-100 text-gray-700 rounded-full">Node.js</span>
@@ -274,7 +274,7 @@
               <span class="text-xs px-2.5 py-1 bg-gray-100 text-gray-700 rounded-full">Square</span>
             </div>
             <div class="flex justify-between text-xs text-gray-600 font-medium">
-              <span class="text-blue">40.9k servers</span>
+              <span class="text-blue" id="server-count-label">40.9k servers</span>
               <span class="text-emerald">2.4M members</span>
             </div>
           </div>
@@ -411,6 +411,25 @@
     }, { threshold: 0.05 });
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Dynamic server count for Movie Night Bot
+    (async () => {
+      const el = document.getElementById('server-count');
+      const label = document.getElementById('server-count-label');
+      if (!el || !label) return;
+      try {
+        const res = await fetch('https://movienightbot.xyz/count');
+        if (!res.ok) throw new Error('API failed');
+        const data = await res.json();
+        const count = data.count;
+        const formatted = count >= 1000 ? (count / 1000).toFixed(1) + 'k' : count.toString();
+        el.textContent = formatted;
+        label.textContent = formatted + ' servers';
+      } catch {
+        el.textContent = '40k';
+        label.textContent = '40k servers';
+      }
+    })();
   </script>
 </body>
 </html>
