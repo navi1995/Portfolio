@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Senior Software Engineer building scalable systems and AI automation.">
+  <title>Navi Jador</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            white: '#ffffff',
+            gray: { 50: '#f9fafb', 100: '#f3f4f6', 200: '#e5e7eb', 300: '#d1d5db', 400: '#9ca3af', 500: '#6b7280', 900: '#111827' },
+            blue: { DEFAULT: '#2563eb', light: '#60a5fa' },
+            emerald: { DEFAULT: '#059669', light: '#34d399' },
+            purple: { DEFAULT: '#7c3aed', light: '#a78bfa' },
+            amber: { DEFAULT: '#d97706', light: '#fbbf24' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4 { font-family: 'Space Grotesk', sans-serif; }
+    .mono { font-family: 'Fira Code', monospace; }
+    .gradient-text { background: linear-gradient(135deg, #2563eb, #059669); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .divider { border-color: rgba(0,0,0,0.05); }
+    .card-shadow { box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.03); }
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
+    @media (max-width: 768px) { .hero-title { font-size: 2rem; } }
+  </style>
+</head>
+<body class="bg-white text-gray-900 antialiased overflow-x-hidden">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b divider">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2">
+        <div class="w-6 h-6 rounded bg-blue flex items-center justify-center">
+          <span class="text-white font-bold text-sm">⚙</span>
+        </div>
+        <span class="font-bold text-xl">Navi.</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#about" class="text-gray-600 hover:text-blue font-medium text-sm transition-colors">About</a>
+        <a href="#experience" class="text-gray-600 hover:text-blue font-medium text-sm transition-colors">Experience</a>
+        <a href="#projects" class="text-gray-600 hover:text-blue font-medium text-sm transition-colors">Projects</a>
+        <a href="#contact" class="text-gray-600 hover:text-blue font-medium text-sm transition-colors">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main class="pt-24">
+    <section class="py-24 md:py-32">
+      <div class="max-w-6xl mx-auto px-6 fade-in">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <h1 class="hero-title text-5xl md:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight mb-4">
+              Building
+              <br />
+              <span class="gradient-text">scalable systems.</span>
+            </h1>
+            <p class="text-gray-600 text-lg mb-10 max-w-md">
+              Senior Software Engineer specializing in building distributed backend systems, cloud architecture, and full-stack applications that scale with enterprise exposure to AI integration & automation.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href="#projects" class="px-6 py-3 rounded-full bg-blue text-white font-medium hover:bg-blue/90 transition-colors flex items-center gap-2">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+              <a href="https://linkedin.com/in/navijador" target="_blank" rel="noopener" class="px-6 py-3 rounded-full border border-gray-300 text-gray-800 font-medium hover:border-gray-500 transition-colors flex items-center gap-2">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                LinkedIn
+              </a>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-blue/5 rounded-3xl"></div>
+            <div class="bg-gray-50 rounded-2xl p-8 shadow-sm border border-gray-100 relative">
+              <div class="mb-6 flex flex-col items-center text-center">
+                <div class="w-20 h-20 rounded-full bg-gray-200 flex items-center justify-center text-3xl mb-4 mx-auto overflow-hidden">
+                  <img src="profile.jpg" alt="Navdeep Jador" class="w-full h-full object-cover">
+                </div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-1">Navdeep Jador</h2>
+                <p class="text-gray-600">Senior Software Engineer</p>
+              </div>
+              <div class="grid grid-cols-2 gap-4 stat-grid">
+                <div class="bg-white rounded-xl p-3 text-center shadow-sm border border-gray-100">
+                  <div class="text-2xl font-bold text-blue">5M+</div>
+                  <div class="text-xs text-gray-600">Users impacted</div>
+                </div>
+                <div class="bg-white rounded-xl p-3 text-center shadow-sm border border-gray-100">
+                  <div class="text-2xl font-bold text-emerald">10+</div>
+                  <div class="text-xs text-gray-600">Years experience</div>
+                </div>
+                <div class="bg-white rounded-xl p-3 text-center shadow-sm border border-gray-100">
+                  <div class="text-2xl font-bold text-purple">8</div>
+                  <div class="text-xs text-gray-600">Projects shipped</div>
+                </div>
+                <div class="bg-white rounded-xl p-3 text-center shadow-sm border border-gray-100">
+                  <div class="text-2xl font-bold text-amber">60K+</div>
+                  <div class="text-xs text-gray-600">Weekly users</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-24 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-6 fade-in">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">About</h2>
+        </div>
+        <div class="grid lg:grid-cols-3 gap-16 max-w-5xl mx-auto">
+          <!-- About Text - col-span-2 -->
+          <div class="lg:col-span-2">
+            <p class="text-gray-700 mb-6">
+              Currently leading engineering at <span class="text-blue font-semibold">Zip Co</span>, focused on customer identity infrastructure and MCP server architecture. Previously at ThoughtWorks, Kolmeo, and Ascender HCM.
+            </p>
+            <p class="text-gray-700 mb-6">
+              I champion TDD, clean architecture, CI/CD, and developer ergonomics - because good systems are built to last.
+            </p>
+          </div>
+
+          <!-- Core Focus - col-span-1 -->
+          <div class="lg:col-span-1 bg-white rounded-2xl p-6 card-shadow border border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-900 mb-4">Core Focus</h3>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue"></span>Distributed Systems</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald"></span>Cloud Architecture</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple"></span>CI/CD & DevOps</li>
+              <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-amber"></span>User-Centered Design</li>
+            </ul>
+          </div>
+
+          <!-- AI & ML Readiness - col-span-3 full width row -->
+          <div class="lg:col-span-3">
+            <div class="bg-white rounded-2xl p-6 card-shadow border border-gray-100">
+              <h3 class="text-lg font-semibold text-gray-900 mb-4">AI & ML Readiness</h3>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue"></span>Enterprise MCP Server - architected and built our first enterprise MCP server for BAU workflow automation at Zip Co</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald"></span>8+ AI Tools - created tools across 8 platforms (GitHub Copilot, OpenClaw agents, automation suites) serving 10M+ users</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple"></span>AI Client Integration - heavy exposure to AI clients, models, workflows, and agent orchestration</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-amber"></span>Self-Hosted AI - set up OpenClaw on personal machines for AI-driven automation in my own time</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="py-24">
+      <div class="max-w-6xl mx-auto px-6 fade-in">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Experience</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">A journey across fintech, proptech, consulting, and enterprise.</p>
+        </div>
+        <div class="space-y-12 max-w-4xl mx-auto">
+          <div class="border-l-2 border-blue pl-6">
+            <span class="text-blue font-mono text-xs uppercase tracking-wider mb-1">Jun 2024 - Present</span>
+            <h3 class="text-xl font-bold text-gray-900">Senior Software Engineer</h3>
+            <p class="text-gray-600 font-medium mb-2">Zip Co</p>
+            <ul class="text-gray-700 space-y-1">
+              <li class="flex gap-2"><span class="text-blue">-</span>Leading customer identity migration to Auth0 for millions of users</li>
+              <li class="flex gap-2"><span class="text-blue">-</span>Architected background job system for seamless customer data pipeline</li>
+              <li class="flex gap-2"><span class="text-blue">-</span>Architected enterprise MCP server for BAU workflow automation</li>
+              <li class="flex gap-2"><span class="text-blue">-</span>Part of Customer Core team owning solutions end-to-end from ideation to implementation</li>
+              <li class="flex gap-2"><span class="text-blue">-</span>Contributed heavily to migration from IDS4 to Auth0 as primary identity provider</li>
+            </ul>
+          </div>
+          <div class="border-l-2 border-emerald pl-6">
+            <span class="text-emerald font-mono text-xs uppercase tracking-wider mb-1">Aug 2023 - May 2024</span>
+            <h3 class="text-xl font-bold text-gray-900">Senior Backend Developer</h3>
+            <p class="text-gray-600 font-medium mb-2">Kolmeo</p>
+            <ul class="text-gray-700 space-y-1">
+              <li class="flex gap-2"><span class="text-emerald">-</span>Delivered offline Inspections module with MongoDB/Realm, Azure Functions, C#/.NET, React</li>
+              <li class="flex gap-2"><span class="text-emerald">-</span>Created SQL-to-MongoDB sync mechanism for offline data consistency</li>
+            </ul>
+          </div>
+          <div class="border-l-2 border-amber pl-6">
+            <span class="text-amber font-mono text-xs uppercase tracking-wider mb-1">Apr - Jul 2023</span>
+            <h3 class="text-xl font-bold text-gray-900">Senior Software Developer</h3>
+            <p class="text-gray-600 font-medium mb-2">V/Line</p>
+            <ul class="text-gray-700 space-y-1">
+              <li class="flex gap-2"><span class="text-amber">-</span>Modernised internal train services platform by containerising services and adopting serverless functions</li>
+              <li class="flex gap-2"><span class="text-amber">-</span>Tech stack: C#/.NET, SQL, Angular, Docker, Kubernetes</li>
+            </ul>
+          </div>
+          <div class="border-l-2 border-purple pl-6">
+            <span class="text-purple font-mono text-xs uppercase tracking-wider mb-1">Sep 2021 - Mar 2023</span>
+            <h3 class="text-xl font-bold text-gray-900">Consultant Fullstack Developer</h3>
+            <p class="text-gray-600 font-medium mb-2">ThoughtWorks AU</p>
+            <ul class="text-gray-700 space-y-1">
+              <li class="flex gap-2"><span class="text-purple">-</span>Built Kafka/Confluent event pipeline reducing mainframe load - 24h to seconds</li>
+              <li class="flex gap-2"><span class="text-purple">-</span>Developed internal metrics platform on GCP (Java + React)</li>
+            </ul>
+          </div>
+          <div class="border-l-2 border-gray-600 pl-6">
+            <span class="text-gray-600 font-mono text-xs uppercase tracking-wider mb-1">Nov 2015 - Apr 2021</span>
+            <h3 class="text-xl font-bold text-gray-900">Software Developer</h3>
+            <p class="text-gray-600 font-medium mb-2">Sandfield</p>
+            <ul class="text-gray-700 space-y-1">
+              <li class="flex gap-2"><span class="text-gray-600">-</span>Full-stack development in Agile environment; custom software and websites for logistics clients</li>
+              <li class="flex gap-2"><span class="text-gray-600">-</span>SPA web apps, mobile apps (PhoneGap/Cordova), internal templating libraries</li>
+              <li class="flex gap-2"><span class="text-gray-600">-</span>Tech stack: C#/VB.NET, T-SQL, JavaScript/jQuery, HTML/(S)CSS</li>
+              <li class="flex gap-2"><span class="text-gray-600">-</span>Collaborated on facial detection, mobile app development, surveillance motion detection</li>
+              <li class="flex gap-2"><span class="text-gray-600">-</span>Reskinning and modernising existing products</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-24 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-6 fade-in">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Projects</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">Selected work showcasing real user impact.</p>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-8">
+          <div class="bg-white rounded-2xl p-8 card-shadow border border-gray-100 transition-transform duration-300 hover:-translate-y-1 relative">
+            <div class="absolute top-4 right-4">
+              <a href="https://chromewebstore.google.com/detail/youtube-windowed-fullscre/gkkmiofalnjagdcjheckamobghglpdpm" target="_blank" rel="noopener" class="text-sm text-blue font-medium flex items-center gap-1 hover:text-blue/80 transition-colors">
+                View on Chrome Web Store
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+              </a>
+            </div>
+            <div class="w-10 h-10 rounded-lg bg-blue/10 flex items-center justify-center mb-4">
+                <span class="text-lg">🌐</span>
+              </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">YouTube Windowed Fullscreen</h3>
+            <p class="text-gray-700 text-sm mb-4">Chrome/Firefox extension (60,000+ weekly users) that forces YouTube player into windowed fullscreen mode. Built with Firebase for user accounts and authorization, and Stripe for premium subscription pipeline.</p>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="text-xs px-2.5 py-1 bg-gray-100 text-gray-700 rounded-full">Chrome Extension</span>
+              <span class="text-xs px-2.5 py-1 bg-gray-100 text-gray-700 rounded-full">JavaScript</span>
+              <span class="text-xs px-2.5 py-1 bg-gray-100 text-gray-700 rounded-full">Manifest V3</span>
+              <span class="text-xs px-2.5 py-1 bg-gray-100 text-gray-700 rounded-full">Firebase</span>
+              <span class="text-xs px-2.5 py-1 bg-gray-100 text-gray-700 rounded-full">Stripe</span>
+            </div>
+            <div class="flex justify-between text-xs text-gray-600 font-medium">
+              <span class="text-blue">60k+ weekly users</span>
+              <span class="text-emerald">4.5/5 stars (287 reviews)</span>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl p-8 card-shadow border border-gray-100 transition-transform duration-300 hover:-translate-y-1 relative">
+            <div class="absolute top-4 right-4">
+              <a href="https://movienightbot.xyz/" target="_blank" rel="noopener" class="text-sm text-blue font-medium flex items-center gap-1 hover:text-blue/80 transition-colors">
+                Visit Website
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+              </a>
+            </div>
+            <div class="w-10 h-10 rounded-lg bg-purple/10 flex items-center justify-center mb-4">
+                <span class="text-lg">🎬</span>
+              </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Movie Night Bot</h3>
+            <p class="text-gray-700 text-sm mb-4">Node.js Discord bot for organizing movie nights with friends. Built from scratch, now serves 2.4M members across 40.9k servers. Premium subscriptions powered by Square payments.</p>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="text-xs px-2.5 py-1 bg-gray-100 text-gray-700 rounded-full">Discord Bot</span>
+              <span class="text-xs px-2.5 py-1 bg-gray-100 text-gray-700 rounded-full">Node.js</span>
+              <span class="text-xs px-2.5 py-1 bg-gray-100 text-gray-700 rounded-full">MongoDB</span>
+              <span class="text-xs px-2.5 py-1 bg-gray-100 text-gray-700 rounded-full">React</span>
+              <span class="text-xs px-2.5 py-1 bg-gray-100 text-gray-700 rounded-full">Square</span>
+            </div>
+            <div class="flex justify-between text-xs text-gray-600 font-medium">
+              <span class="text-blue">40.9k servers</span>
+              <span class="text-emerald">2.4M members</span>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl p-8 card-shadow border border-gray-100 transition-transform duration-300 hover:-translate-y-1 relative">
+            <div class="absolute top-4 right-4">
+              <a href="https://github.com/navi1995/Chrome-Webstore-Stats" target="_blank" rel="noopener" class="text-sm text-blue font-medium flex items-center gap-1 hover:text-blue/80 transition-colors">
+                View on GitHub
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+              </a>
+            </div>
+            <div class="w-10 h-10 rounded-lg bg-amber/10 flex items-center justify-center mb-4">
+                <span class="text-lg">📦</span>
+              </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Chrome Webstore Stats</h3>
+            <p class="text-gray-700 text-sm mb-4">NPM package providing stats for Chrome Web Store extensions. Includes automated testing and CI/CD.</p>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="text-xs px-2.5 py-1 bg-gray-100 text-gray-700 rounded-full">NPM Package</span>
+              <span class="text-xs px-2.5 py-1 bg-gray-100 text-gray-700 rounded-full">NPM</span>
+              <span class="text-xs px-2.5 py-1 bg-gray-100 text-gray-700 rounded-full">JavaScript</span>
+            </div>
+            <div class="text-xs text-gray-600 font-medium">
+              <span class="text-amber">Automated CI</span>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl p-8 card-shadow border border-gray-100 transition-transform duration-300 hover:-translate-y-1 relative">
+            <div class="absolute top-4 right-4">
+              <a href="https://github.com/navi1995/Lifx-macOS-Menu-Switch" target="_blank" rel="noopener" class="text-sm text-blue font-medium flex items-center gap-1 hover:text-blue/80 transition-colors">
+                View on GitHub
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+              </a>
+            </div>
+            <div class="w-10 h-10 rounded-lg bg-emerald/10 flex items-center justify-center mb-4">
+                <span class="text-lg">💡</span>
+              </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">LIFX Menu Bar Control</h3>
+            <p class="text-gray-700 text-sm mb-4">SwiftUI menu bar app for controlling LIFX smart lights from macOS. Native macOS integration.</p>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="text-xs px-2.5 py-1 bg-gray-100 text-gray-700 rounded-full">macOS App</span>
+              <span class="text-xs px-2.5 py-1 bg-gray-100 text-gray-700 rounded-full">Swift</span>
+              <span class="text-xs px-2.5 py-1 bg-gray-100 text-gray-700 rounded-full">SwiftUI</span>
+            </div>
+            <div class="text-xs text-gray-600 font-medium">
+              <span class="text-emerald">Native macOS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-24">
+      <div class="max-w-6xl mx-auto px-6 fade-in">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Skills</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">Languages, frameworks, platforms, and practices I work with daily.</p>
+        </div>
+        <div class="grid lg:grid-cols-3 gap-12 max-w-4xl mx-auto">
+          <div class="space-y-8">
+            <h3 class="text-gray-900 font-semibold text-sm uppercase tracking-wider mb-4">Languages</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-lg">C#</span>
+              <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-lg">JavaScript</span>
+              <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-lg">Java</span>
+              <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-lg">Python</span>
+              <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-lg">Swift</span>
+              <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-lg">SQL</span>
+            </div>
+          </div>
+          <div class="space-y-8">
+            <h3 class="text-gray-900 font-semibold text-sm uppercase tracking-wider mb-4">Frameworks</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-lg">React</span>
+              <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-lg">.NET Core</span>
+              <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-lg">Node.js</span>
+              <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-lg">Spring Boot</span>
+              <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-lg">SwiftUI</span>
+              <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-lg">Angular</span>
+            </div>
+          </div>
+          <div class="space-y-8">
+            <h3 class="text-gray-900 font-semibold text-sm uppercase tracking-wider mb-4">Infrastructure</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-lg">Docker</span>
+              <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-lg">Kubernetes</span>
+              <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-lg">Azure</span>
+              <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-lg">AWS</span>
+              <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-lg">GCP</span>
+              <span class="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm rounded-lg">Terraform</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-24 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-6 fade-in text-center">
+        <div class="mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Contact</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">Have a project in mind or want to chat about distributed systems, engineering culture, or the best coffee in Melbourne?</p>
+        </div>
+        <div class="space-y-6 max-w-md mx-auto">
+          <div class="flex flex-col items-center"><span class="block text-xs text-gray-500 uppercase tracking-wider mb-1">Email</span><a href="mailto:navi.jador@gmail.com" class="text-gray-900 font-medium flex items-center justify-center gap-2">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg>
+            navi.jador@gmail.com</a></div>
+          <div class="flex flex-col items-center"><span class="block text-xs text-gray-500 uppercase tracking-wider mb-1">LinkedIn</span><a href="https://linkedin.com/in/navijador" target="_blank" rel="noopener" class="text-gray-900 font-medium flex items-center justify-center gap-2">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
+            linkedin.com/in/navijador</a></div>
+          <div class="flex flex-col items-center"><span class="block text-xs text-gray-500 uppercase tracking-wider mb-1">GitHub</span><a href="https://github.com/navi1995" target="_blank" rel="noopener" class="text-gray-900 font-medium flex items-center justify-center gap-2">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path></svg>
+            github.com/navi1995</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-12 border-t divider">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p class="text-gray-600 text-sm">© 2025 Navi Jador. All rights reserved.</p>
+      <p class="text-gray-500 text-xs mt-2 mono">Built with ⚙️ in Melbourne.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Intersection Observer for fade-in animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
